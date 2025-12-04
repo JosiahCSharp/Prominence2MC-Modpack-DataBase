@@ -1,0 +1,4 @@
+In the Prominent-GLOBAL-MC1.20.1-3.9.4.jar file:
+
+Uses the soulbound class's onCraft function to save
+stack, world, player : sets soulbound to player in NBT (presumably)

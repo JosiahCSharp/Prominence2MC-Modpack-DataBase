@@ -57,5 +57,43 @@ ATKSPD: -2.5f
 Footfalls: 7 + decreasing increments till 0 or less.
 FIREATTR: 7.0d Modifier (spellschool)
 SOULATTR: 7.0d Modifier (spellschool)
+--- Abilities ---
+Soul Absorption:
+Desc1:
+Desc2:
+Breath of Azhar:
+Desc1:
+Desc2:
+Breath of Souls:
+Desc1:
+SubDesc1:
+Desc2:
+SubDesc2
+
+Ekavar: 
+(INTERESTING: Re-Uses Magus Attacks!)
+DMG: 5.0d Modifier
+ATKSPD: -3.0d Modifier
+Phases: Arcane, Fire, Frost, Holy, Astral
+Calls in a Entity for the phase from Magus Attacks
+Attaches the different attribute phase to the entity
+Entity attacks player/mob with Magus attacks
+Uses Particles from the same spells to apply on atk.
+
+--- Attributes --- (all from SpellSchools)
+Fire, Arcane, Frost, and Healing: 10.0d Modifier (higher than usual + entity attack sounds goated)
+
+--- Descriptions --- (Summarized)
+Evolves via upgrade tree
+Can be evolved into one of the 5 "powers" with a new name for each.
+Can cast Arcane, Fire, Frost, Holy abilities from spell book
+
+
+
+
+
+
+
+
 
 
