@@ -1,0 +1,61 @@
+In the Prominent-GLOBAL-MC1.20.1-3.9.4.jar file:
+
+Thunderwrath:
+DMG: 14 (float)
+ATKSPD: -2.6 (float)
+
+Apocolypse:
+DMG:
+SPD: f
+DEATHATTR: 50.0d modifier (from eternal_attributes)
+FROSTATTR: 20.0d modifier (from SpellSchools)
+BLOODATTR: 20.0d modifier (from eternal_attributes)
+UNHOLYATTR: 20.0d modifier (from eternal_attributes)
+LORE: 
+FROSTMOURNE: (from prominent)
+
+Apophis:
+DMG: Passes 8 (In-game entity: 1, item: 9, total: 10)
+ATKSPD: -3.0f modifier
+HOLYATTR: 7.0d modifier (from Spellschools)
+SMITE:
+
+Ashedar:
+CORRUPTED: boolean
+Eclipsed: Solar_Eclipse or Lunar_Eclipse + usingBoth
+AFFLunar/Solar: If using both + lunarEclipse/SolarEclipse respectively.
+(ifAsh)FIREATTR: 7.0d modifier
+(ifEdar)ARCANEATTR: 7.0d modifier
+eclipse_cooldown:
+DAMAGE:
+SPEED:
+ABILITY1:
+ABILITY1Desc:
+ABILITY1PASSIVE1:
+ABILITY2:
+ABILITY2Desc:
+ABILITY2PASSIVE1:
+ABILITY2PASSIVE2:
+ABILITY3:
+ABILITY3Desc:
+ifAsh: Sunfire Ability
+ifEdar: Arcane Ability
+ashedar_essence:
+eclipse_cooldown:
+astral_attunement:
+ifCorrupted: corruptionAmt += 15
+
+AshedarSpawner:
+Creates the Ashedar from the Ashedar Essences
+Requires essence to be in main hand with empty off hand
+"Ash'edar, the Cosmic Twins are now soulbound to you"
+Corrupted item
+
+Azhar:
+DMG: Passes 9
+ATKSPD: -2.5f
+Footfalls: 7 + decreasing increments till 0 or less.
+FIREATTR: 7.0d Modifier (spellschool)
+SOULATTR: 7.0d Modifier (spellschool)
+
+
