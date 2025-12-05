@@ -88,6 +88,72 @@ Evolves via upgrade tree
 Can be evolved into one of the 5 "powers" with a new name for each.
 Can cast Arcane, Fire, Frost, Holy abilities from spell book
 
+Frostmourne:
+DMG:
+ATKSPD:
+--- Attributes ---
+FROSTMOURNE: 7.0d modifier (spellschools)
+BLOODATTR: 7.0d modifier (eternal_attributes)
+UNHOLYATTR: 7.0d modifier (eternal_attributes)
+--- Ability ---
+Curse of Agony:
+Desc1:
+Desc2:
+
+Fryalath:
+DMG: pushes 9
+ATKSPD: -3.0f
+Uses Gem Sockets from SimplySwords. // investigate later
+--- Attributes --- 
+FIREATTR: 4.0d Modifier (SpellSchools)
+SOULATTR: 4.0d Modifier (SpellSchools)
+REABSORPTIONATTR: 10.0d Modifier (extraspellatributes)
+--- Abilities ---
+Greater Scorch:
+Desc1:
+Desc2:
+
+Greater Laceration:
+Desc1:
+Desc2:
+
+Greater Meteor:
+Desc1:
+Desc2:
+
+Fiery Core:
+Desc1:
+Desc2:
+
+Ghaj:
+DMG:
+ATKSPD:
+--- Abilities ---
+Power Drain:
+Desc1:
+Desc2:
+
+Feed Me:
+Desc1:
+Desc2:
+
+Dagger Mastery:
+Desc1:
+Desc2:
+
+--- ATTRIBUTES ---
+CORRUPTIONATTR: 37.0d Modifier
+--- WHISPERING ---
+Every 2 Minutes, the weapon has a 10% chance to Whisper to you
+There are a total of 10 dialogs available (if I am correct that it is based on integers of 1.)
+Applies voidcloack effect when feedGhaj is met.
+When feedGhaj is met, Does damage of corruption * 2 to enemy
+
+Orion:
+
+
+
+
 
 
 
