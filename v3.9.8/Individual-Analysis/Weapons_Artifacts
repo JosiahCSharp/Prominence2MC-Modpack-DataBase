@@ -1,8 +1,18 @@
 In the Prominent-GLOBAL-MC1.20.1-3.9.4.jar file:
 
 Thunderwrath:
-DMG: 14 (float)
-ATKSPD: -2.6 (float)
+DMG: 14.0f
+ATKSPD: -2.6f
+PhysicalScaleFact: 0.85f
+ThunderScaleFact = 1.25f
+--- CHANCE ATTACK ---
+Chance = 0.25f
+if Titans_Grip, Chance = 0.35f (simplyskills)
+
+if chance = 0.25f, 25% chance per atk
+if chance = 0.35f, 35% chance per atk
+
+will apply LIGHTNINGATTR * 1.25f + DMG (total stat) * 0.85f
 
 Apocolypse:
 DMG:
@@ -150,6 +160,85 @@ Applies voidcloack effect when feedGhaj is met.
 When feedGhaj is met, Does damage of corruption * 2 to enemy
 
 Orion:
+DMG:
+ATKSPD:
+
+--- Skill (Tree) ---
+Horsehead:
+Casper:
+Ori:
+
+--- Abilities ---
+Cosmic Influence:
+Desc:
+Pledge To Stars:
+Desc:
+Algjebbah Gift:
+Desc:
+Mintaka Gift:
+Desc:
+Alnilam Gift:
+Desc:
+Alnitak Gift:
+Desc:
+ACTIVE (Switchable based on Skill Tree):
+Pledge to Nebulae:
+Desc:
+Horsehead Gift:
+Desc:
+Strength of Nebula:
+Desc:
+Casper Ghost:
+Desc:
+
+Skillet:
+DMG: Pushes 7
+ATKSPD: -2.5f 
+--- Attributes ---
+FIREATTR: Granny's Pan Modifier 5.0d (Spellschools)
+KNCKBCK: 2.0d Modifier
+--- Abilities ---
+Granny's Wrath:
+Desc:
+
+LORE:
+
+Supernova:
+DMG:
+ATKSPD:
+Adds Physical_melee from ExternalSpellSchools
+--- Attributes ---
+FIRE, FROST, ARCANE = 6.0d Modifier (Spellschools)
+--- Abilities ---
+Astral Burst:
+Desc1:
+Desc2:
+Arcane Projection:
+Desc1:
+Desc2:
+Frost Projection:
+Desc1:
+Desc2:
+Astral Echoing:
+Desc:
+
+Thousand Fists:
+DMG:
+ATKSPD:
+--- Abilities ---
+Fury of a thousand Fists:
+Desc1:
+Desc2:
+Requirement:
+--- Attributes ---
+FIRE, SOUL: 7.0d Modifier (SpellSchools)
+--- Affects ---
+if (rage) ->
+Dmg = 1.0d + 2.0d*soulfire where
+soulfire is equal to the Fire attr + Soul attr values.
+Ex. Fire = 5, Soul = 5, Dmg = 21.0d
+
+
 
 
 
