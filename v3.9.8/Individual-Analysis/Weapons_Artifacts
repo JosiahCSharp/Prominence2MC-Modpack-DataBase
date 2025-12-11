@@ -1,10 +1,11 @@
 In the Prominent-GLOBAL-MC1.20.1-3.9.4.jar file:
 
 Thunderwrath:
-DMG: 14.0f
+DMG: 14.0f base
 ATKSPD: -2.6f
 PhysicalScaleFact: 0.85f
 ThunderScaleFact = 1.25f
+// Dont be mislead! If the weapon shows -1 in JEI for Lightning Atk DMG it is because you have 0 Lightning Attribute! It will change when equipped! Look at chance atk for more info!
 --- CHANCE ATTACK ---
 Chance = 0.25f
 if Titans_Grip, Chance = 0.35f (simplyskills)
@@ -13,6 +14,17 @@ if chance = 0.25f, 25% chance per atk
 if chance = 0.35f, 35% chance per atk
 
 will apply LIGHTNINGATTR * 1.25f + DMG (total stat) * 0.85f
+Adds ElectricSpark particle effect, 
+then plays lava extinguish sound when done,
+--- Attributes ---
+LIGHTNINGATTR: 5.0d modifier (SpellSchools)
+--- Abilities ---
+Shows -1.0F in JEI on servers due to code (does not affect usability!)
+Serkonid Heritage: 
+"Attacks have a 25% chance of striking again with" calculated damage" lightning damage."
+Being fated to Warrior's Devotion increases its chance to 35%"
+
+
 
 Apocolypse:
 DMG:
@@ -233,10 +245,38 @@ Requirement:
 --- Attributes ---
 FIRE, SOUL: 7.0d Modifier (SpellSchools)
 --- Affects ---
-if (rage) ->
+if the attacker has the rage effect, there is a 50% chance to do
 Dmg = 1.0d + 2.0d*soulfire where
-soulfire is equal to the Fire attr + Soul attr values.
+soulfire is equal to the Fire attr + Soul attr values (soul attr / 4 first!).
 Ex. Fire = 5, Soul = 5, Dmg = 21.0d
+Then sets the enemy on fire for 1 second
+Has a netherite block as a valid repair item
+
+Vaazkar:
+Repairable with Encased Remnant
+ATTR: FIRE: 5.0d modifier (SpellSchools)
+Every 25 ticks, Ability Phase is re-checked/assigned.
+It then adds Flame Particles to FootFalls
+
+COOLING FLAMES (HOW IT ACTUALLY WORKS)
+If the user does not have Cooling Flames effect when holding:
+It starts counting ticks and enables.
+After 260 ticks of use, aka 13 seconds, Cooling Flames is set on cooldown and its ability disabled temporarily.
+After 60 ticks or 3 seconds or when in the first phase,
+if the phase is between 0 and 2, if not equivalent to 1, every 10 ticks, when the ability phase is 2, it applies 0.125 * the players max health as SpellSchool Fire damage to the enemy that was last attacked. If in phase two, it heals allies every 40 seconds calculated by the players max health * 0.05. 
+When the ability phase isnt 1, the remaining Ticks (260) is greater than 90 (not equal to so for 149 ticks maximum), it adds a cooldown. When the phase is equal to 1, a 15 sec cooldown is applied. Otherwise, it's defaulted to 10.
+
+Wall of Flames:
+"After 3 seconds of shielding with Vaazkar, surround yourself with flames dealing 3% of your Maximum Health as fire damage to nearby enemies per second. Last 10 seconds, then goes on cooldown for 15 seconds."
+
+Instant Flames:
+"After shielding with Vaazkar, surround yourself with flames, dealing 3% of your Maximum Health as fire damage to nearby enemies per second. Enemies get taunted every time they're damage by it. Lasts up to 10 seconds, then goes on cooldown for 10 seconds."
+
+Protective Flames:
+"After 3 seconds of shielding with Vaazkar, surround yourself with flames, healing nearby players for 3% of your maximum health every 2 seconds. Lasts up to 10 seconds, then goes on cooldown for 15 seconds."
+
+Firestorm:
+"After 3 seconds of shielding with Vaazkar, surround yourself with flames, dealing 5% of your Maximum Health as fire damage to nearby enemies per second. Lasts up to 10 seconds, then goes on cooldown for 15 seconds"
 
 
 
